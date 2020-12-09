@@ -68,6 +68,29 @@ public class PacManage extends JFrame implements Runnable, KeyListener
         coins.add(new GoldCoin(500, 160));
         coins.add(new GoldCoin(520, 160));
         //third horizontal coins
+        coins.add(new GoldCoin(20, 220));
+        coins.add(new GoldCoin(40, 220));
+        coins.add(new GoldCoin(60, 220));
+        coins.add(new GoldCoin(80, 220));
+        coins.add(new GoldCoin(100, 220));
+        coins.add(new GoldCoin(120, 220));
+        coins.add(new GoldCoin(180, 220));
+        coins.add(new GoldCoin(200, 220));
+        coins.add(new GoldCoin(220, 220));
+        coins.add(new GoldCoin(240, 220));
+        coins.add(new GoldCoin(260, 220));
+        coins.add(new GoldCoin(280, 220));
+        coins.add(new GoldCoin(300, 220));
+        coins.add(new GoldCoin(320, 220));
+        coins.add(new GoldCoin(340, 220));
+        coins.add(new GoldCoin(360, 220));
+        coins.add(new GoldCoin(420, 220));
+        coins.add(new GoldCoin(440, 220));
+        coins.add(new GoldCoin(460, 220));
+        coins.add(new GoldCoin(480, 220));
+        coins.add(new GoldCoin(500, 220));
+        coins.add(new GoldCoin(520, 220));
+        //fourth horizontal coins
         coins.add(new GoldCoin(20, 460));
         coins.add(new GoldCoin(40, 460));
         coins.add(new GoldCoin(60, 460));
@@ -92,11 +115,10 @@ public class PacManage extends JFrame implements Runnable, KeyListener
         coins.add(new GoldCoin(480, 460));
         coins.add(new GoldCoin(500, 460));
         coins.add(new GoldCoin(520, 460));
-        //fourth horizontal y =520
+        //fith horizontal y =520
         coins.add(new GoldCoin(20, 520));
         coins.add(new GoldCoin(40, 520));
         coins.add(new GoldCoin(60, 520));
-       
         coins.add(new GoldCoin(120, 520));
         coins.add(new GoldCoin(140, 520));
         coins.add(new GoldCoin(160, 520));
@@ -113,12 +135,33 @@ public class PacManage extends JFrame implements Runnable, KeyListener
         coins.add(new GoldCoin(380, 520));
         coins.add(new GoldCoin(400, 520));
         coins.add(new GoldCoin(420, 520));
-        
         coins.add(new GoldCoin(480, 520));
         coins.add(new GoldCoin(500, 520));
         coins.add(new GoldCoin(520, 520));
-        //fifth horizontal
-        //sixth horizontal
+        //sixth horizontal y=580
+        coins.add(new GoldCoin(20, 580));
+        coins.add(new GoldCoin(40, 580));
+        coins.add(new GoldCoin(60, 580));
+        coins.add(new GoldCoin(80, 580));
+        coins.add(new GoldCoin(100, 580));
+        coins.add(new GoldCoin(120, 580));
+        coins.add(new GoldCoin(180, 580));
+        coins.add(new GoldCoin(200, 580));
+        coins.add(new GoldCoin(220, 580));
+        coins.add(new GoldCoin(240, 580));
+        coins.add(new GoldCoin(260, 580));
+        coins.add(new GoldCoin(280, 580));
+        coins.add(new GoldCoin(300, 580));
+        coins.add(new GoldCoin(320, 580));
+        coins.add(new GoldCoin(340, 580));
+        coins.add(new GoldCoin(360, 580));
+        coins.add(new GoldCoin(420, 580));
+        coins.add(new GoldCoin(440, 580));
+        coins.add(new GoldCoin(460, 580));
+        coins.add(new GoldCoin(480, 580));
+        coins.add(new GoldCoin(500, 580));
+        coins.add(new GoldCoin(520, 580));
+        //seventh horizontal
         coins.add(new GoldCoin(20, 640));
         coins.add(new GoldCoin(40, 640));
         coins.add(new GoldCoin(60, 640));
