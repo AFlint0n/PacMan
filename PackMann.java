@@ -19,7 +19,7 @@ public class PackMann
         yv = 2;
         mouth = 6;
         arcAngle = 321;
-        r = new Rectangle(x, y, 20, 20);
+        r = new Rectangle(x+3, y+3, 14, 14);
     }
 
     public Rectangle getR()
@@ -43,6 +43,7 @@ public class PackMann
         if(arcAngle >360 || arcAngle<320)
             mouth *= -1;
     }
+
 
     public void move()
     {

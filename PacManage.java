@@ -12,9 +12,24 @@ public class PacManage extends JFrame implements Runnable, KeyListener
     PackMann p;
     ArrayList<GoldCoin> coins = new ArrayList<GoldCoin>();
     ArrayList<Rectangle> barriers = new ArrayList<Rectangle>();
+    ArrayList<PowerCoin> Pcoin = new ArrayList<PowerCoin>();
+    ArrayList<Ghosts> ghosts = new ArrayList<Ghosts>();
     public PacManage()
     {
         p = new PackMann(270, 520);
+
+        //Ghosts
+        ghosts.add(new Ghosts(270, 350, 1));
+        ghosts.add(new Ghosts(270, 350, 2));
+        ghosts.add(new Ghosts(270, 350, 3));
+        ghosts.add(new Ghosts(270, 350, 4));
+        
+        //Power Pellets
+        Pcoin.add(new PowerCoin(20,120));
+        Pcoin.add(new PowerCoin(520,120));
+        Pcoin.add(new PowerCoin(20,520));
+        Pcoin.add(new PowerCoin(520,520));
+
         //top horizontal coins
         coins.add(new GoldCoin(20, 80));
         coins.add(new GoldCoin(40, 80));
@@ -78,8 +93,6 @@ public class PacManage extends JFrame implements Runnable, KeyListener
         coins.add(new GoldCoin(200, 220));
         coins.add(new GoldCoin(220, 220));
         coins.add(new GoldCoin(240, 220));
-        coins.add(new GoldCoin(260, 220));
-        coins.add(new GoldCoin(280, 220));
         coins.add(new GoldCoin(300, 220));
         coins.add(new GoldCoin(320, 220));
         coins.add(new GoldCoin(340, 220));
@@ -116,7 +129,7 @@ public class PacManage extends JFrame implements Runnable, KeyListener
         coins.add(new GoldCoin(500, 460));
         coins.add(new GoldCoin(520, 460));
         //fith horizontal y =520
-        coins.add(new GoldCoin(20, 520));
+
         coins.add(new GoldCoin(40, 520));
         coins.add(new GoldCoin(60, 520));
         coins.add(new GoldCoin(120, 520));
@@ -126,8 +139,6 @@ public class PacManage extends JFrame implements Runnable, KeyListener
         coins.add(new GoldCoin(200, 520));
         coins.add(new GoldCoin(220, 520));
         coins.add(new GoldCoin(240, 520));
-        coins.add(new GoldCoin(260, 520));
-        coins.add(new GoldCoin(280, 520));
         coins.add(new GoldCoin(300, 520));
         coins.add(new GoldCoin(320, 520));
         coins.add(new GoldCoin(340, 520));
@@ -137,7 +148,7 @@ public class PacManage extends JFrame implements Runnable, KeyListener
         coins.add(new GoldCoin(420, 520));
         coins.add(new GoldCoin(480, 520));
         coins.add(new GoldCoin(500, 520));
-        coins.add(new GoldCoin(520, 520));
+
         //sixth horizontal y=580
         coins.add(new GoldCoin(20, 580));
         coins.add(new GoldCoin(40, 580));
@@ -149,8 +160,6 @@ public class PacManage extends JFrame implements Runnable, KeyListener
         coins.add(new GoldCoin(200, 580));
         coins.add(new GoldCoin(220, 580));
         coins.add(new GoldCoin(240, 580));
-        coins.add(new GoldCoin(260, 580));
-        coins.add(new GoldCoin(280, 580));
         coins.add(new GoldCoin(300, 580));
         coins.add(new GoldCoin(320, 580));
         coins.add(new GoldCoin(340, 580));
@@ -188,6 +197,97 @@ public class PacManage extends JFrame implements Runnable, KeyListener
         coins.add(new GoldCoin(480, 640));
         coins.add(new GoldCoin(500, 640));
         coins.add(new GoldCoin(520, 640));
+        //first vertical coins
+        coins.add(new GoldCoin(20, 100));
+
+        coins.add(new GoldCoin(20, 140));
+        coins.add(new GoldCoin(20, 180));
+        coins.add(new GoldCoin(20, 200));
+        coins.add(new GoldCoin(20, 480));
+        coins.add(new GoldCoin(20, 500));
+        coins.add(new GoldCoin(20, 600));
+        coins.add(new GoldCoin(20, 620));
+        //second vertical coins
+        coins.add(new GoldCoin(120, 100));
+        coins.add(new GoldCoin(120, 120));
+        coins.add(new GoldCoin(120, 140));
+        coins.add(new GoldCoin(120, 180));
+        coins.add(new GoldCoin(120, 200));
+        coins.add(new GoldCoin(120, 220));
+        coins.add(new GoldCoin(120, 240));
+        coins.add(new GoldCoin(120, 260));
+        coins.add(new GoldCoin(120, 280));
+        coins.add(new GoldCoin(120, 300));
+        coins.add(new GoldCoin(120, 320));
+        coins.add(new GoldCoin(120, 340));
+        coins.add(new GoldCoin(120, 360));
+        coins.add(new GoldCoin(120, 380));
+        coins.add(new GoldCoin(120, 400));
+        coins.add(new GoldCoin(120, 420));
+        coins.add(new GoldCoin(120, 440));
+        coins.add(new GoldCoin(120, 480));
+        coins.add(new GoldCoin(120, 500));
+        coins.add(new GoldCoin(120, 540));
+        coins.add(new GoldCoin(120, 560));
+        //third vertical coins
+        coins.add(new GoldCoin(420, 100));
+        coins.add(new GoldCoin(420, 120));
+        coins.add(new GoldCoin(420, 140));
+        coins.add(new GoldCoin(420, 180));
+        coins.add(new GoldCoin(420, 200));
+        coins.add(new GoldCoin(420, 220));
+        coins.add(new GoldCoin(420, 240));
+        coins.add(new GoldCoin(420, 260));
+        coins.add(new GoldCoin(420, 280));
+        coins.add(new GoldCoin(420, 300));
+        coins.add(new GoldCoin(420, 320));
+        coins.add(new GoldCoin(420, 340));
+        coins.add(new GoldCoin(420, 360));
+        coins.add(new GoldCoin(420, 380));
+        coins.add(new GoldCoin(420, 400));
+        coins.add(new GoldCoin(420, 420));
+        coins.add(new GoldCoin(420, 440));
+        coins.add(new GoldCoin(420, 480));
+        coins.add(new GoldCoin(420, 500));
+        coins.add(new GoldCoin(420, 540));
+        coins.add(new GoldCoin(420, 560));
+        //fourth vertical coins
+        coins.add(new GoldCoin(520, 100));
+        coins.add(new GoldCoin(520, 140));
+        coins.add(new GoldCoin(520, 180));
+        coins.add(new GoldCoin(520, 200));
+        coins.add(new GoldCoin(520, 480));
+        coins.add(new GoldCoin(520, 500));
+        coins.add(new GoldCoin(520, 600));
+        coins.add(new GoldCoin(520, 620));
+        //Misc Gold Coins
+        coins.add(new GoldCoin(60, 540));
+        coins.add(new GoldCoin(60, 560));
+        coins.add(new GoldCoin(180, 540));
+        coins.add(new GoldCoin(180, 560));
+        coins.add(new GoldCoin(360, 540));
+        coins.add(new GoldCoin(360, 560));
+        coins.add(new GoldCoin(480, 540));
+        coins.add(new GoldCoin(480, 560));
+        coins.add(new GoldCoin(180, 180));
+        coins.add(new GoldCoin(180, 200));
+        coins.add(new GoldCoin(360, 180));
+        coins.add(new GoldCoin(360, 200));
+        coins.add(new GoldCoin(240, 100));
+        coins.add(new GoldCoin(300, 100));
+        coins.add(new GoldCoin(240, 120));
+        coins.add(new GoldCoin(300, 120));
+        coins.add(new GoldCoin(240, 140));
+        coins.add(new GoldCoin(300, 140));
+        coins.add(new GoldCoin(240, 480));
+        coins.add(new GoldCoin(300, 480));
+        coins.add(new GoldCoin(240, 500));
+        coins.add(new GoldCoin(300, 500));
+        coins.add(new GoldCoin(240, 600));
+        coins.add(new GoldCoin(300, 600));
+        coins.add(new GoldCoin(240, 620));
+        coins.add(new GoldCoin(300, 620));
+
         //top barrier
         barriers.add(new Rectangle(0, 60, 560, 20));
         //leftedge
@@ -250,6 +350,7 @@ public class PacManage extends JFrame implements Runnable, KeyListener
         barriers.add(new Rectangle(200, 300, 20, 100));
         barriers.add(new Rectangle(200, 380, 160, 20));
         barriers.add(new Rectangle(340, 300, 20, 100));
+
         con.setLayout(new FlowLayout());
         addKeyListener(this);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -270,10 +371,27 @@ public class PacManage extends JFrame implements Runnable, KeyListener
                         coins.get(x).eatCoin();
                     }
                 }
+                for(int x= 0; x< ghosts.size(); x++){
+                    ghosts.get(x).move();
+                }
+                for(int x = 0; x < Pcoin.size(); x++)
+                {
+                    if(p.getR().intersects(Pcoin.get(x).getR())){
+                        Pcoin.get(x).eatPowerCoin();
+                    }
+                }
                 for(int x= 0; x< barriers.size(); x++){
                     if(p.getR().intersects(barriers.get(x)))
                     {
                         p.moveBack();
+                    }
+                }
+                for(int x= 0; x< ghosts.size(); x++){
+                    for(int y=0; y< barriers.size(); y++){
+                        if(ghosts.get(x).getR().intersects(barriers.get(y)))
+                        {
+                            ghosts.get(x).change();
+                        }
                     }
                 }
                 repaint();
@@ -294,11 +412,22 @@ public class PacManage extends JFrame implements Runnable, KeyListener
         {
             coins.get(x).drawCoin(painter);
         }
+
         painter.setColor(Color.blue);
         painter.setStroke(new BasicStroke(4));
         for(int x = 0; x < barriers.size(); x++)
         {
             painter.draw(barriers.get(x));
+        }
+        
+        for(int x = 0; x < Pcoin.size(); x++)
+        {
+            Pcoin.get(x).drawPowerCoin(painter);
+        }
+        
+        for(int x = 0; x < ghosts.size(); x++)
+        {
+            ghosts.get(x).drawGhost(painter);
         }
 
         p.drawPacMan(painter);
