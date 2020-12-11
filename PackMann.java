@@ -49,6 +49,12 @@ public class PackMann
     {
         x += xv;
         y += yv;
+        if(x<0){
+            x= 555;
+        }
+        if(x>560){
+            x= 5;
+        }
         r.setLocation(x, y);
     }
 

@@ -53,11 +53,13 @@ public class Ghosts
     {
         x += xv;
         y += yv;
+         if(x<0){
+            x= 555;
+        }
+        if(x>560){
+            x= 5;
+        }
         r.setLocation(x, y);
-        if(x<-10)
-            x= 836;
-        if(x>836)
-            x= -10;
     }
 
     public void change(){
