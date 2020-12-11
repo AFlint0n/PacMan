@@ -23,7 +23,7 @@ public class PacManage extends JFrame implements Runnable, KeyListener
         ghosts.add(new Ghosts(270, 350, 2));
         ghosts.add(new Ghosts(270, 350, 3));
         ghosts.add(new Ghosts(270, 350, 4));
-        
+
         //Power Pellets
         Pcoin.add(new PowerCoin(20,120));
         Pcoin.add(new PowerCoin(520,120));
@@ -387,6 +387,9 @@ public class PacManage extends JFrame implements Runnable, KeyListener
                     }
                 }
                 for(int x= 0; x< ghosts.size(); x++){
+                    if(p.getR().intersects(ghosts.get(x).getR())){
+                        System.exit(0);
+                    }
                     for(int y=0; y< barriers.size(); y++){
                         if(ghosts.get(x).getR().intersects(barriers.get(y)))
                         {
@@ -419,12 +422,12 @@ public class PacManage extends JFrame implements Runnable, KeyListener
         {
             painter.draw(barriers.get(x));
         }
-        
+
         for(int x = 0; x < Pcoin.size(); x++)
         {
             Pcoin.get(x).drawPowerCoin(painter);
         }
-        
+
         for(int x = 0; x < ghosts.size(); x++)
         {
             ghosts.get(x).drawGhost(painter);
